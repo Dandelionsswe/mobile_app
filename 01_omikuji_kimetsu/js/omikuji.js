@@ -5,6 +5,8 @@ let nBefore = ""; //前回の変数nの値
 
 window.addEventListener("DOMContentLoaded",
     function() {
+        
+        console.log("Hello!!");
 
         $("header").textillate({
             loop: false, 
@@ -42,6 +44,7 @@ btn1.addEventListener("click",
             n =Math.floor(Math.random() * resultText.length);
         }
         nBefore = n; //nの値をsave
+        console.log(n);
 
         let resultMaxSpeed=[5,5,1,1,1,5];
         let resultMaxSize=[30,30,40,60,35,20];
@@ -54,6 +57,9 @@ btn1.addEventListener("click",
         omikujiContent.textContent = resultText[n];
         omikujiContent.style.color= resultColor[n];
         omikujiContent.style.fontSize= resultFontSize[n];
+        console.log(omikujiContent.textContent);
+        console.log(omikujiContent.style.color);
+        console.log(omikujiContent.style.fontSize);
 
         // おみくじのテキスト画像対応
         omikujiTextImage.src =resultTextImage[n]; 
